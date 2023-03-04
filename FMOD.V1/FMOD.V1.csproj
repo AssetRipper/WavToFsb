@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>FMOD</RootNamespace>
+	</PropertyGroup>
+	<PropertyGroup>
+		<LibraryName>FMOD.V1</LibraryName>
+		<Authors>ds5678</Authors>
+		<PackageTags>native;fmod;fsb</PackageTags>
+		<PackageProjectUrl>https://github.com/AssetRipper/WavToFsb</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AssetRipper/WavToFsb</RepositoryUrl>
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath=""/>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Title>$(LibraryName) $(MSBuildProjectName) Native</Title>
+		<Description>
+			Wrapper and Native library for FMOD 1.10.20.
+		</Description>
+
+		<PackageId>AssetRipper.Fmod1</PackageId>
+		<TargetFramework>net6.0</TargetFramework>
+
+		<!-- https://github.com/NuGet/Home/issues/4254 -->
+		<NoWarn>$(NoWarn);NU5128</NoWarn>
+		<!-- <NoBuild>true</NoBuild> -->
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<!-- <IncludeBuildOutput>false</IncludeBuildOutput> -->
+		<!-- <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences> -->
+	</PropertyGroup>
+	
+	<ItemDefinitionGroup>
+		<PackNativeLibrary>
+			<Pack>true</Pack>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</PackNativeLibrary>
+	</ItemDefinitionGroup>
+	
+	<ItemGroup>
+
+		<!--Windows-->
+		<PackNativeLibrary Include="windows/fmod.dll">
+			<Link>runtimes/win-x86/native/fmod.dll</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="windows/fmod64.dll">
+			<Link>runtimes/win-x64/native/fmod.dll</Link>
+		</PackNativeLibrary>
+
+		<!--Mac-->
+		<PackNativeLibrary Include="mac/libfmod.dylib">
+			<Link>runtimes/osx-x64/native/libfmod.dylib</Link>
+		</PackNativeLibrary>
+
+		<!--Linux-->
+		<PackNativeLibrary Include="linux/x86/libfmod.so">
+			<Link>runtimes/linux-x86/native/libfmod.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="linux/x86_64/libfmod.so">
+			<Link>runtimes/linux-x64/native/libfmod.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="linux/arm/libfmod.so">
+			<Link>runtimes/linux-arm/native/libfmod.so</Link>
+		</PackNativeLibrary>
+
+		<!--Android-->
+		<PackNativeLibrary Include="android/x86/libfmod.so">
+			<Link>runtimes/android-x86/native/libfmod.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="android/x86_64/libfmod.so">
+			<Link>runtimes/android-x64/native/libfmod.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="android/arm64-v8a/libfmod.so">
+			<Link>runtimes/android-arm64/native/libfmod.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="android/armeabi-v7a/libfmod.so">
+			<Link>runtimes/android-arm/native/libfmod.so</Link>
+		</PackNativeLibrary>
+
+		<!--iOS-->
+		<!--Skipped-->
+
+		<!--Wasm-->
+		<!--Skipped-->
+
+	</ItemGroup>
+
+</Project>

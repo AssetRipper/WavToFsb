@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<member name="FSBANK_FSBVERSION">
+		<summary>
+			Version of FSB to write out.
+		</summary>
+	</member>
+	<member name="FSBANK_FSBVERSION.FSBANK_FSBVERSION_FSB5">
+		<summary>
+			Produce FSB version 5 files.
+		</summary>
+	</member>
+	<member name="FSBANK_FSBVERSION.FSBANK_FSBVERSION_MAX">
+		<summary>
+			Upper bound for this enumeration, for use with validation.
+		</summary>
+	</member>
+</doc>

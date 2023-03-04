@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<member name="FSBANK_STATE">
+		<summary>
+			Current state during the build process.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_DECODING">
+		<summary>
+			Decode a file to usable raw sample data.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_ANALYSING">
+		<summary>
+			Scan sound data for details (such as optimized sample rate).
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_PREPROCESSING">
+		<summary>
+			Prepares sound data for encoder.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_ENCODING">
+		<summary>
+			Pass the sample data to the chosen encoder.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_WRITING">
+		<summary>
+			Write encoded data into an FSB.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_FINISHED">
+		<summary>
+			Process complete.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_FAILED">
+		<summary>
+			An error has occurred, check data (as FSBANK_STATEDATA_FAILED) for details.
+		</summary>
+	</member>
+	<member name="FSBANK_STATE.FSBANK_STATE_WARNING">
+		<summary>
+			A warning has been issued, check data (as FSBANK_STATEDATA_WARNING) for details.
+		</summary>
+	</member>
+</doc>

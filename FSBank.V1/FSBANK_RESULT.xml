@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<member name="FSBANK_RESULT">
+		<summary>
+			Error codes returned from every function.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_OK">
+		<summary>
+			No errors.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_CACHE_CHUNKNOTFOUND">
+		<summary>
+			An expected chunk is missing from the cache, perhaps try deleting cache files.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_CANCELLED">
+		<summary>
+			The build process was cancelled during compilation by the user.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_CANNOT_CONTINUE">
+		<summary>
+			The build process cannot continue due to previously ignored errors.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_ENCODER">
+		<summary>
+			Encoder for chosen format has encountered an unexpected error.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_ENCODER_INIT">
+		<summary>
+			Encoder initialization failed.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_ENCODER_NOTSUPPORTED">
+		<summary>
+			Encoder for chosen format is not supported on this platform.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_FILE_OS">
+		<summary>
+			An operating system based file error was encountered.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_FILE_NOTFOUND">
+		<summary>
+			A specified file could not be found.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_FMOD">
+		<summary>
+			Internal error from FMOD sub-system.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_INITIALIZED">
+		<summary>
+			Already initialized.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_INVALID_FORMAT">
+		<summary>
+			The format of the source file is invalid.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_INVALID_PARAM">
+		<summary>
+			An invalid parameter has been passed to this function.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_MEMORY">
+		<summary>
+			Ran out of memory.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_UNINITIALIZED">
+		<summary>
+			Not initialized yet.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_WRITER_FORMAT">
+		<summary>
+			Chosen encode format is not supported by this FSB version.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_WARN_CANNOTLOOP">
+		<summary>
+			Source file is too short for seamless looping. Looping disabled.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_WARN_IGNORED_FILTERHIGHFREQ">
+		<summary>
+			FSBANK_BUILD_FILTERHIGHFREQ flag ignored: feature only supported by XMA format.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_WARN_IGNORED_DISABLESEEKING">
+		<summary>
+			FSBANK_BUILD_DISABLESEEKING flag ignored: feature only supported by XMA format.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_WARN_FORCED_DONTWRITENAMES">
+		<summary>
+			FSBANK_BUILD_FSB5_DONTWRITENAMES flag forced: cannot write names when source is from memory.
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_ENCODER_FILE_NOTFOUND">
+		<summary>
+			External encoder dynamic library not found
+		</summary>
+	</member>
+	<member name="FSBANK_RESULT.FSBANK_ERR_ENCODER_FILE_BAD">
+		<summary>
+			External encoder dynamic library could not be loaded, possibly incorrect binary format, incorrect architecture, file corruption
+		</summary>
+	</member>
+</doc>

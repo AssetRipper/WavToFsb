@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<member name="FSBANK_SUBSOUND">
+		<summary>
+			Representation of how to encode a single subsound in the final FSB.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.fileNames">
+		<summary>
+			List of file names (instead of FSBANK_SUBSOUND::fileData) used to produce an interleaved sound.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.fileData">
+		<summary>
+			List of file data pointers (instead of FSBANK_SUBSOUND::fileNames) used to produce an interleaved sound.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.fileDataLengths">
+		<summary>
+			List of file data lengths corresponding to the items in the FSBANK_SUBSOUND::fileData list.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.numFiles">
+		<summary>
+			Number of items in either FSBANK_SUBSOUND::fileData / FSBANK_SUBSOUND::fileDataLengths or FSBANK_SUBSOUND::fileNames.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.overrideFlags">
+		<summary>
+			Flags that will reverse the equivalent flags passed to FSBank_Build.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.overrideQuality">
+		<summary>
+			Override the quality setting passed to FSBank_Build.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.desiredSampleRate">
+		<summary>
+			Resample to this sample rate (ignores optimize sample rate setting), up to 192000Hz.
+		</summary>
+	</member>
+	<member name="FSBANK_SUBSOUND.percentOptimizedRate">
+		<summary>
+			If using FSBANK_BUILD_OPTIMIZESAMPLERATE, this is the percentage of that rate to be used, up to 100.0%.
+		</summary>
+	</member>
+</doc>

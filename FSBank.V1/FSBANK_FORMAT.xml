@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+	<member name="FSBANK_FORMAT">
+		<summary>
+			Compression formats available for encoding
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_PCM">
+		<summary>
+			PCM                                 (1:1)   All platforms.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_PCM_BIGENDIAN">
+		<summary>
+			PCM Big Endian                      (1:1)   Xbox360 and PS3 only.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_XMA">
+		<summary>
+			XMA                                 (VBR)   Xbox360 / XboxOne only (hardware).   Depends on xmaencoder.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_AT9_PSVITA">
+		<summary>
+			ATRAC9                              (CBR)   PSVita only (hardware).              Depends on libatrac9.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_AT9_PS4">
+		<summary>
+			ATRAC9                              (CBR)   PS4 only (hardware).                 Depends on libatrac9.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_VORBIS">
+		<summary>
+			Vorbis                              (VBR)   All platforms.                       Depends on libvorbis.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_FADPCM">
+		<summary>
+			FMOD ADPCM                          (3.5:1) All platforms.
+		</summary>
+	</member>
+	<member name="FSBANK_FORMAT.FSBANK_FORMAT_MAX">
+		<summary>
+			Upper bound for this enumeration, for use with validation.
+		</summary>
+	</member>
+</doc>
