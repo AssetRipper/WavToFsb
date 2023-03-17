@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FSBank.V1\FSBank.V1.csproj" />
+    <PackageReference Include="AssetRipper.FSBank.V1" Version="0.1.0.1" />
   </ItemGroup>
 
 </Project>

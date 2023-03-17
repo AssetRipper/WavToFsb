@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FMOD.V1\FMOD.V1.csproj" />
+    <PackageReference Include="AssetRipper.FMOD.V1" Version="0.1.0" />
   </ItemGroup>
 
 </Project>
