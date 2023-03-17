@@ -14,11 +14,23 @@ internal static class ModuleInitialization
 		if (OperatingSystem.IsWindows() && Environment.Is64BitProcess)
 		{
 			NativeLibrary.SetDllImportResolver(typeof(ModuleInitialization).Assembly, ResolveFSBank64);
-			NativeLibrary.Load("libfsbvorbis64", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory);
+		}
+		LoadLibFsbVorbis();
+	}
+
+	private static void LoadLibFsbVorbis()
+	{
+		//Loading this library is required for fsbank to function properly.
+		//If it's not loaded into the process before using fsbank, fsbank might search for it and fail to find it.
+		//We use TryLoad because native libraries aren't available for direct project references, ie unit testing.
+		//If the native libraries are moved to their own package, this can be switched back to Load.
+		if (OperatingSystem.IsWindows() && Environment.Is64BitProcess)
+		{
+			NativeLibrary.TryLoad("libfsbvorbis64", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory, out _);
 		}
 		else
 		{
-			NativeLibrary.Load("libfsbvorbis", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory);
+			NativeLibrary.TryLoad("libfsbvorbis", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory, out _);
 		}
 	}
 
