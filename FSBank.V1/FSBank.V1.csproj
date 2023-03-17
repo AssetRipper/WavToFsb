@@ -1,9 +1,93 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<IsTrimmable>true</IsTrimmable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>ds5678</Authors>
+		<Company>AssetRipper</Company>
+		<PackageId>AssetRipper.FSBank.V1</PackageId>
+		<PackageTags>native;fmod;fsb</PackageTags>
+		<Description>Wrapper and Native library for FSBank 1.10.20.</Description>
+		<Version>0.1.0.0</Version>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<RepositoryUrl>https://github.com/AssetRipper/WavToFsb</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/AssetRipper/WavToFsb</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="./README.md" Pack="true" PackagePath=""/>
+	</ItemGroup>
+
+	<ItemDefinitionGroup>
+		<PackNativeLibrary>
+			<Pack>true</Pack>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</PackNativeLibrary>
+	</ItemDefinitionGroup>
+
+	<ItemGroup>
+
+		<!--Windows-->
+		<PackNativeLibrary Include="windows/fsbank.dll">
+			<Link>runtimes/win-x86/native/fsbank.dll</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="windows/libfsbvorbis.dll">
+			<Link>runtimes/win-x86/native/libfsbvorbis.dll</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="windows/fsbank64.dll">
+			<Link>runtimes/win-x64/native/fsbank64.dll</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="windows/libfsbvorbis64.dll">
+			<Link>runtimes/win-x64/native/libfsbvorbis64.dll</Link>
+		</PackNativeLibrary>
+
+		<!--Mac-->
+		<!--Skipped-->
+
+		<!--Linux-->
+		<PackNativeLibrary Include="linux/x86/libfsbank.so">
+			<Link>runtimes/linux-x86/native/libfsbank.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="linux/x86/libfsbvorbis.so">
+			<Link>runtimes/linux-x86/native/libfsbvorbis.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="linux/x86_64/libfsbank.so">
+			<Link>runtimes/linux-x64/native/libfsbank.so</Link>
+		</PackNativeLibrary>
+		<PackNativeLibrary Include="linux/x86_64/libfsbvorbis.so">
+			<Link>runtimes/linux-x64/native/libfsbvorbis.so</Link>
+		</PackNativeLibrary>
+
+		<!--Android-->
+		<!--Skipped-->
+
+		<!--iOS-->
+		<!--Skipped-->
+
+		<!--Wasm-->
+		<!--Skipped-->
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\FMOD.V1\FMOD.V1.csproj" />
+	</ItemGroup>
 
 </Project>

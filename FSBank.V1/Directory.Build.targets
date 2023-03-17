@@ -1,0 +1,21 @@
+﻿<Project>
+    <ItemGroup>
+        <Content Include="@(PackNativeLibrary)">
+            <Link>%(Link)</Link>
+            <PackagePath>%(Link)</PackagePath>
+            <Pack>%(Pack)</Pack>
+            <CopyToOutputDirectory>%(CopyToOutputDirectory)</CopyToOutputDirectory>
+        </Content>
+        <Content Include="@(PackProjectFile->Exists())">
+            <PackagePath>%(PackagePath)</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Content>
+        <Content Include="@(PackFrameworkProjectFile)">
+            <PackagePath>%(PackagePath)</PackagePath>
+            <Pack>true</Pack>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Content>
+
+    </ItemGroup>
+</Project>
