@@ -16,7 +16,7 @@
 		<PackageId>AssetRipper.FSBank.V1</PackageId>
 		<PackageTags>native;fmod;fsb</PackageTags>
 		<Description>Wrapper and Native library for FSBank 1.10.20.</Description>
-		<Version>0.1.0.0</Version>
+		<Version>0.1.0.1</Version>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<RepositoryUrl>https://github.com/AssetRipper/WavToFsb</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/AssetRipper/WavToFsb</PackageProjectUrl>

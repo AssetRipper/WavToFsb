@@ -14,6 +14,11 @@ internal static class ModuleInitialization
 		if (OperatingSystem.IsWindows() && Environment.Is64BitProcess)
 		{
 			NativeLibrary.SetDllImportResolver(typeof(ModuleInitialization).Assembly, ResolveFSBank64);
+			NativeLibrary.Load("libfsbvorbis64", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory);
+		}
+		else
+		{
+			NativeLibrary.Load("libfsbvorbis", typeof(ModuleInitialization).Assembly, DllImportSearchPath.ApplicationDirectory);
 		}
 	}
 
