@@ -6,9 +6,15 @@ namespace WavToFsb
 	{
 		static void Main(string[] args)
 		{
-			string pathToWav = "";
+			if (args.Length != 2)
+			{
+				Console.WriteLine("This program takes exactly two arguments: the path to a wav file and an output path for an fsb file.");
+				return;
+			}
 
-			string outputPath = "";
+			string pathToWav = args[0];
+
+			string outputPath = args[1];
 
 			Convert(pathToWav, outputPath);
 
